@@ -1,19 +1,19 @@
 import UIKit
 
 final class CartTransitioner: NSObject, UIViewControllerTransitioningDelegate {
-    let animator: CartAnimator
+    private let animator: CartAnimator
 
     init(animator: CartAnimator) {
         self.animator = animator
     }
 
     func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
-        animator.appearance = true
+        animator.isAppearance = true
         return animator
     }
 
     func animationController(forDismissed dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
-        animator.appearance = false
+        animator.isAppearance = false
         return animator
     }
 
@@ -26,7 +26,6 @@ final class CartTransitioner: NSObject, UIViewControllerTransitioningDelegate {
     }
 
     func presentationController(forPresented presented: UIViewController, presenting: UIViewController?, source: UIViewController) -> UIPresentationController? {
-        return nil
+        return CartOverlapController(presentedViewController: presented, presenting: presenting)
     }
 }
-

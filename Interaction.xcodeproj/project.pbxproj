@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		738B2BC7211C7E2B001CE458 /* CartTransitioner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 738B2BC6211C7E2B001CE458 /* CartTransitioner.swift */; };
 		738B2BC9211C9D7A001CE458 /* CartViewRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 738B2BC8211C9D7A001CE458 /* CartViewRouter.swift */; };
+		738B2BCC211DBBD1001CE458 /* CartCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 738B2BCA211DBBD1001CE458 /* CartCell.swift */; };
+		738B2BCD211DBBD1001CE458 /* CartCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 738B2BCB211DBBD1001CE458 /* CartCell.xib */; };
+		738B2BCF211DE1F6001CE458 /* CartAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 738B2BCE211DE1F6001CE458 /* CartAnimator.swift */; };
+		738B2BD1211DE21D001CE458 /* CartOverlapController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 738B2BD0211DE21D001CE458 /* CartOverlapController.swift */; };
 		CDEE4641211B5CFE0023B043 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDEE4640211B5CFE0023B043 /* AppDelegate.swift */; };
 		CDEE4643211B5CFE0023B043 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDEE4642211B5CFE0023B043 /* ViewController.swift */; };
 		CDEE4646211B5CFE0023B043 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CDEE4644211B5CFE0023B043 /* Main.storyboard */; };
@@ -21,6 +25,10 @@
 /* Begin PBXFileReference section */
 		738B2BC6211C7E2B001CE458 /* CartTransitioner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartTransitioner.swift; sourceTree = "<group>"; };
 		738B2BC8211C9D7A001CE458 /* CartViewRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartViewRouter.swift; sourceTree = "<group>"; };
+		738B2BCA211DBBD1001CE458 /* CartCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartCell.swift; sourceTree = "<group>"; };
+		738B2BCB211DBBD1001CE458 /* CartCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CartCell.xib; sourceTree = "<group>"; };
+		738B2BCE211DE1F6001CE458 /* CartAnimator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartAnimator.swift; sourceTree = "<group>"; };
+		738B2BD0211DE21D001CE458 /* CartOverlapController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartOverlapController.swift; sourceTree = "<group>"; };
 		CDEE463D211B5CFE0023B043 /* Interaction.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Interaction.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CDEE4640211B5CFE0023B043 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CDEE4642211B5CFE0023B043 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -43,6 +51,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		738B2BD2211DE2A4001CE458 /* Animations */ = {
+			isa = PBXGroup;
+			children = (
+				738B2BC6211C7E2B001CE458 /* CartTransitioner.swift */,
+				738B2BCE211DE1F6001CE458 /* CartAnimator.swift */,
+				738B2BD0211DE21D001CE458 /* CartOverlapController.swift */,
+			);
+			path = Animations;
+			sourceTree = "<group>";
+		};
 		CDEE4634211B5CFE0023B043 = {
 			isa = PBXGroup;
 			children = (
@@ -64,14 +82,16 @@
 			children = (
 				CDEE4640211B5CFE0023B043 /* AppDelegate.swift */,
 				CDEE4642211B5CFE0023B043 /* ViewController.swift */,
-				738B2BC6211C7E2B001CE458 /* CartTransitioner.swift */,
-				CDEE4644211B5CFE0023B043 /* Main.storyboard */,
-				CDEE4647211B5D090023B043 /* Assets.xcassets */,
-				CDEE4649211B5D090023B043 /* LaunchScreen.storyboard */,
-				CDEE464C211B5D090023B043 /* Info.plist */,
 				CDEE4652211B5D4F0023B043 /* CartViewController.swift */,
 				CDEE4653211B5D4F0023B043 /* CartViewController.xib */,
 				738B2BC8211C9D7A001CE458 /* CartViewRouter.swift */,
+				738B2BCA211DBBD1001CE458 /* CartCell.swift */,
+				738B2BCB211DBBD1001CE458 /* CartCell.xib */,
+				CDEE4644211B5CFE0023B043 /* Main.storyboard */,
+				738B2BD2211DE2A4001CE458 /* Animations */,
+				CDEE4647211B5D090023B043 /* Assets.xcassets */,
+				CDEE4649211B5D090023B043 /* LaunchScreen.storyboard */,
+				CDEE464C211B5D090023B043 /* Info.plist */,
 			);
 			path = Interaction;
 			sourceTree = "<group>";
@@ -135,6 +155,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CDEE4655211B5D4F0023B043 /* CartViewController.xib in Resources */,
+				738B2BCD211DBBD1001CE458 /* CartCell.xib in Resources */,
 				CDEE464B211B5D090023B043 /* LaunchScreen.storyboard in Resources */,
 				CDEE4648211B5D090023B043 /* Assets.xcassets in Resources */,
 				CDEE4646211B5CFE0023B043 /* Main.storyboard in Resources */,
@@ -149,8 +170,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				CDEE4643211B5CFE0023B043 /* ViewController.swift in Sources */,
+				738B2BCC211DBBD1001CE458 /* CartCell.swift in Sources */,
 				738B2BC7211C7E2B001CE458 /* CartTransitioner.swift in Sources */,
 				CDEE4654211B5D4F0023B043 /* CartViewController.swift in Sources */,
+				738B2BCF211DE1F6001CE458 /* CartAnimator.swift in Sources */,
+				738B2BD1211DE21D001CE458 /* CartOverlapController.swift in Sources */,
 				738B2BC9211C9D7A001CE458 /* CartViewRouter.swift in Sources */,
 				CDEE4641211B5CFE0023B043 /* AppDelegate.swift in Sources */,
 			);

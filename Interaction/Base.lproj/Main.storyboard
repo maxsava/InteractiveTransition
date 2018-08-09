@@ -8,6 +8,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="Stack View standard spacing" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -22,12 +23,29 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="r9H-zG-zkC">
                                 <rect key="frame" x="0.0" y="609" width="375" height="58"/>
                                 <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacingType="standard" baselineRelativeArrangement="YES" translatesAutoresizingMaskIntoConstraints="NO" id="IVd-Ms-Td1">
+                                        <rect key="frame" x="60" y="8" width="50.5" height="41"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Items: 3" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J18-5Y-Msb">
+                                                <rect key="frame" x="0.0" y="0.0" width="50.5" height="16"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$36.6" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PNP-5T-Kod">
+                                                <rect key="frame" x="0.0" y="19.5" width="50.5" height="21.5"/>
+                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QkD-ZX-mEd">
                                         <rect key="frame" x="247" y="8" width="120" height="42"/>
                                         <color key="backgroundColor" red="0.45098039220000002" green="0.84313725490000002" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="42" id="VUX-3H-V1Q"/>
-                                            <constraint firstAttribute="width" constant="120" id="q9f-1F-GAn"/>
+                                            <constraint firstAttribute="width" constant="120" id="zLI-na-RfR"/>
                                         </constraints>
                                         <state key="normal" title="NEXT">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -39,11 +57,13 @@
                                         </userDefinedRuntimeAttributes>
                                     </button>
                                 </subviews>
-                                <color key="backgroundColor" red="0.82352941180000006" green="0.82352941180000006" blue="0.82352941180000006" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.90196078431372551" green="0.90196078431372551" blue="0.90196078431372551" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="bottom" secondItem="QkD-ZX-mEd" secondAttribute="bottom" constant="8" id="JBj-dY-5Lw"/>
+                                    <constraint firstItem="IVd-Ms-Td1" firstAttribute="leading" secondItem="r9H-zG-zkC" secondAttribute="leading" constant="60" id="Myv-UY-RZY"/>
                                     <constraint firstItem="QkD-ZX-mEd" firstAttribute="top" secondItem="r9H-zG-zkC" secondAttribute="top" constant="8" id="QlW-9C-Y4h"/>
                                     <constraint firstAttribute="trailingMargin" secondItem="QkD-ZX-mEd" secondAttribute="trailing" id="gbz-Fc-yLW"/>
+                                    <constraint firstItem="IVd-Ms-Td1" firstAttribute="centerY" secondItem="QkD-ZX-mEd" secondAttribute="centerY" id="moK-vg-Q3T"/>
                                 </constraints>
                                 <connections>
                                     <outletCollection property="gestureRecognizers" destination="IG9-9a-qqU" appends="YES" id="BEA-6g-geO"/>
