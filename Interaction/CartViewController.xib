@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_0" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CartViewController" customModule="Interaction" customModuleProvider="target">
+            <connections>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="343" height="327"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="agw-vm-TPx" userLabel="Header view">
+                    <rect key="frame" x="0.0" y="0.0" width="343" height="58"/>
+                    <color key="backgroundColor" red="0.85098039219999999" green="1" blue="0.6588235294" alpha="1" colorSpace="calibratedRGB"/>
+                    <connections>
+                        <outletCollection property="gestureRecognizers" destination="IyM-Xi-6VC" appends="YES" id="OFi-bw-VKU"/>
+                    </connections>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kTP-fr-eRt">
+                    <rect key="frame" x="0.0" y="269" width="343" height="58"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3dy-S7-R4g">
+                            <rect key="frame" x="215" y="8" width="120" height="42"/>
+                            <color key="backgroundColor" red="0.45098039220000002" green="0.84313725490000002" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="120" id="Hh9-EO-klb"/>
+                                <constraint firstAttribute="height" constant="42" id="pVw-Po-O8e"/>
+                            </constraints>
+                            <state key="normal" title="NEXT">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </state>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                    <integer key="value" value="4"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" red="0.85098039219999999" green="1" blue="0.6588235294" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstItem="3dy-S7-R4g" firstAttribute="top" secondItem="kTP-fr-eRt" secondAttribute="top" constant="8" id="CJl-Ly-mBn"/>
+                        <constraint firstAttribute="trailingMargin" secondItem="3dy-S7-R4g" secondAttribute="trailing" id="Ww2-TQ-kOr"/>
+                        <constraint firstAttribute="bottom" secondItem="3dy-S7-R4g" secondAttribute="bottom" constant="8" id="jRP-G1-tBh"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="kTP-fr-eRt" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="0TO-q4-Fvq"/>
+                <constraint firstItem="agw-vm-TPx" firstAttribute="height" secondItem="kTP-fr-eRt" secondAttribute="height" id="UOA-Uv-nvp"/>
+                <constraint firstItem="agw-vm-TPx" firstAttribute="trailing" secondItem="i5M-Pr-FkT" secondAttribute="trailing" id="Z7G-ZD-JE3"/>
+                <constraint firstItem="agw-vm-TPx" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="ezU-kT-NIT"/>
+                <constraint firstItem="kTP-fr-eRt" firstAttribute="bottom" secondItem="i5M-Pr-FkT" secondAttribute="bottom" id="jEE-3H-dwV"/>
+                <constraint firstItem="kTP-fr-eRt" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="wte-1Z-Pbo"/>
+                <constraint firstItem="agw-vm-TPx" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="xCY-OT-iXm"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="45.5" y="-28.5"/>
+        </view>
+        <tapGestureRecognizer id="IyM-Xi-6VC">
+            <connections>
+                <action selector="closeCart" destination="-1" id="9io-8t-JlI"/>
+            </connections>
+        </tapGestureRecognizer>
+    </objects>
+</document>
