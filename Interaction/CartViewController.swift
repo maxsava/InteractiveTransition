@@ -22,7 +22,12 @@ final class CartViewController: UIViewController {
 
         tableView.register(UINib(nibName: "CartCell", bundle: nil), forCellReuseIdentifier: "CartCell")
 
-        let height = headerView.bounds.height * 2 + cellHeightCache.reduce(0, +)
+        var safeAreaHeight: CGFloat = 0
+        if #available(iOS 11, *) {
+            safeAreaHeight = view.safeAreaInsets.bottom
+        }
+
+        let height = headerView.bounds.height * 2 + cellHeightCache.reduce(0, +) + safeAreaHeight
         preferredContentSize = CGSize(width: view.bounds.width, height: height)
     }
 
@@ -70,7 +75,12 @@ extension CartViewController: UITableViewDelegate, UITableViewDataSource {
         cellHeightCache[indexPath.row] = cell.bounds.height
 
         if previousValue != cell.bounds.height {
-            let height = headerView.bounds.height * 2 + cellHeightCache.reduce(0, +)
+            var safeAreaHeight: CGFloat = 0
+            if #available(iOS 11, *) {
+                safeAreaHeight = view.safeAreaInsets.bottom
+            }
+
+            let height = headerView.bounds.height * 2 + cellHeightCache.reduce(0, +) + safeAreaHeight
             preferredContentSize = CGSize(width: view.bounds.width, height: height)
         }
     }

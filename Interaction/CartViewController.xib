@@ -103,7 +103,6 @@
                         <constraint firstItem="3dy-S7-R4g" firstAttribute="top" secondItem="kTP-fr-eRt" secondAttribute="top" constant="8" id="CJl-Ly-mBn"/>
                         <constraint firstItem="400-qc-juO" firstAttribute="centerY" secondItem="3dy-S7-R4g" secondAttribute="centerY" id="G5O-ax-3Zp"/>
                         <constraint firstAttribute="trailingMargin" secondItem="3dy-S7-R4g" secondAttribute="trailing" id="Ww2-TQ-kOr"/>
-                        <constraint firstAttribute="bottom" secondItem="3dy-S7-R4g" secondAttribute="bottom" constant="8" id="jRP-G1-tBh"/>
                         <constraint firstItem="400-qc-juO" firstAttribute="leading" secondItem="kTP-fr-eRt" secondAttribute="leading" constant="60" id="mjT-cq-52z"/>
                     </constraints>
                 </view>
@@ -111,6 +110,7 @@
             <color key="backgroundColor" red="0.90196078431372551" green="0.90196078431372551" blue="0.90196078431372551" alpha="1" colorSpace="calibratedRGB"/>
             <constraints>
                 <constraint firstItem="kTP-fr-eRt" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="0TO-q4-Fvq"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="3dy-S7-R4g" secondAttribute="bottom" constant="8" id="0vR-UY-hgK"/>
                 <constraint firstAttribute="bottom" secondItem="ySj-co-I0p" secondAttribute="bottom" id="7Pr-dJ-Tkx"/>
                 <constraint firstItem="PGe-Zh-0ST" firstAttribute="top" secondItem="agw-vm-TPx" secondAttribute="bottom" id="92d-aV-EXK"/>
                 <constraint firstItem="PGe-Zh-0ST" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="TuP-F2-4eX"/>
@@ -119,7 +119,7 @@
                 <constraint firstItem="ySj-co-I0p" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="c0q-77-Yf1"/>
                 <constraint firstItem="agw-vm-TPx" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="ezU-kT-NIT"/>
                 <constraint firstItem="ySj-co-I0p" firstAttribute="height" secondItem="kTP-fr-eRt" secondAttribute="height" id="i4q-OJ-oKV"/>
-                <constraint firstItem="kTP-fr-eRt" firstAttribute="bottom" secondItem="i5M-Pr-FkT" secondAttribute="bottom" id="jEE-3H-dwV"/>
+                <constraint firstItem="kTP-fr-eRt" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" id="jEE-3H-dwV"/>
                 <constraint firstAttribute="trailing" secondItem="ySj-co-I0p" secondAttribute="trailing" id="jjW-86-d1B"/>
                 <constraint firstItem="ySj-co-I0p" firstAttribute="top" secondItem="PGe-Zh-0ST" secondAttribute="bottom" priority="999" id="t9X-zA-vRe"/>
                 <constraint firstAttribute="trailing" secondItem="PGe-Zh-0ST" secondAttribute="trailing" id="vbs-bn-eqi"/>

@@ -95,29 +95,46 @@ final class CartAnimator: UIPercentDrivenInteractiveTransition, UIViewController
             return
         }
 
-        let translation = recognizer.translation(in: view)
-        let verticalMovement = translation.y / cartViewController.preferredContentSize.height
-        let progress: CGFloat
-
-        if recognizer === externalPanGestureRecognizer {
-            progress = min(abs(min(verticalMovement, 0)), 1)
-        } else {
-            progress = max(verticalMovement, 0)
+        guard let viewController = cartViewController else {
+            return
         }
+
+        let translation = recognizer.translation(in: view)
 
         switch recognizer.state {
         case .changed:
-            update(progress)
+            let verticalMovement = translation.y / viewController.preferredContentSize.height
+            update(fraction(from: verticalMovement))
+
         case .ended, .cancelled, .failed:
+            let velocity = recognizer.velocity(in: view)
+            let projectedY = translation.y + project(initialVelocity: velocity.y, decelerationRate: UIScrollViewDecelerationRateNormal)
+
+            let verticalMovement = projectedY / viewController.preferredContentSize.height
+            let progress = fraction(from: verticalMovement)
+
             if progress > 0.5 {
                 finish()
             } else {
                 cancel()
             }
             isInteractive = false
+
         default:
             cancel()
             isInteractive = false
+        }
+    }
+
+    private func project(initialVelocity: CGFloat, decelerationRate: CGFloat) -> CGFloat {
+        return (initialVelocity / 1000.0) * decelerationRate / (1.0 - decelerationRate)
+    }
+
+    private func fraction(from verticalMovement: CGFloat) -> CGFloat {
+        if isAppearance {
+            return min(abs(min(verticalMovement, 0)), 1)
+        } else {
+            return max(verticalMovement, 0)
         }
     }
 }
